@@ -172,9 +172,7 @@ For each user, the E-step calculates the posterior probability of belonging to e
 
 A missing rating is predicted using the posterior-weighted component means:
 
-$$
-\hat{x}_{i,l}=\sum_{j=1}^{K}p(z_i=j \mid x_i)\mu_{j,l}
-$$
+`x_hat[i,l] = sum_{j=1}^K p(z_i = j | x_i) * mu[j,l]`
 
 where:
 
@@ -393,10 +391,7 @@ The final model is:
 The missing entries are predicted using:
 
 $$
-\hat{x}_{i,l}
-=
-\sum_{j=1}^{K}
-p(z_i=j \mid x_i)\mu_{j,l}
+\hat{x}_{i,l}=\sum_{j=1}^{K}p(z_i=j \mid x_i)\mu_{j,l}
 $$
 
 The completed matrix is then compared with the provided complete rating matrix.
